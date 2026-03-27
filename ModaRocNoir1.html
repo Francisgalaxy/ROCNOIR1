@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROC NOIR | Diseña con IA</title>
+    <!-- Tipografías elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styleModaRocNoir.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header (con enlace a página principal) -->
+        <header>
+            <a href="index.html" class="logo">ROC NOIR</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Colecciones</a></li>
+                    <li><a href="diseno-ia.html" class="nav-link">Diseña con IA</a></li>
+                    <li><a href="index.html#ecodiseno" class="nav-link">Ecodiseño</a></li>
+                    <li><a href="diseno-ia.html" class="nav-link">Atelier IA</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero interno -->
+        <div class="inner-hero">
+            <h1>Diseña con IA</h1>
+            <p>Tu creatividad, nuestra inteligencia artificial</p>
+        </div>
+
+        <!-- Sección principal de IA -->
+        <div class="design-section">
+            <div class="design-layout">
+                <!-- Panel de opciones -->
+                <div>
+                    <h2 style="color: #C4A15A; margin-bottom: 25px; font-size: 1.8rem;">Crea tu prenda</h2>
+                    <form id="disenoForm">
+                        <div class="form-group">
+                            <label>Tipo de prenda</label>
+                            <select id="tipoPrenda">
+                                <option value="vestido">Vestido de noche</option>
+                                <option value="chaqueta">Chaqueta estructurada</option>
+                                <option value="pantalon">Pantalón sastre</option>
+                                <option value="camisa">Camisa de seda</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tela preferida</label>
+                            <select id="tela">
+                                <option value="seda">Seda natural</option>
+                                <option value="algodon">Algodón egipcio</option>
+                                <option value="lana">Lana merino</option>
+                                <option value="cuero">Cuero vegano</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Color principal</label>
+                            <input type="text" id="color" placeholder="Ej: Negro, Borgoña, Dorado" value="Negro">
+                        </div>
+                        <div class="form-group">
+                            <label>Estilo / Detalles</label>
+                            <select id="estilo">
+                                <option value="minimalista">Minimalista</option>
+                                <option value="vanguardista">Vanguardista</option>
+                                <option value="clasico">Clásico atemporal</option>
+                                <option value="aventurero">Aventurero</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn-gold" id="generarBtn">Diseñar con IA</button>
+                    </form>
+                </div>
+
+                <!-- Panel de resultado visual -->
+                <div class="resultado">
+                    <h3>Visualización IA</h3>
+                    <div class="prenda-preview">
+                        <img id="imagenIA" src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1887&auto=format&fit=crop" alt="Prenda generada">
+                    </div>
+                    <p class="descripcion-ia" id="descripcionIA">Selecciona opciones y haz clic en "Diseñar con IA" para ver tu creación personalizada.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sugerencias de telas premium (inspiración) -->
+        <div style="margin: 60px 0;">
+            <h2 style="color: #C4A15A; text-align: center; margin-bottom: 30px;">Telas de alta costura</h2>
+            <div class="telas-grid">
+                <div class="tela-card" data-tela="seda">
+                    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=2070&auto=format&fit=crop" alt="Seda natural">
+                    <p>Seda natural</p>
+                </div>
+                <div class="tela-card" data-tela="algodon">
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=2070&auto=format&fit=crop" alt="Algodón egipcio">
+                    <p>Algodón egipcio</p>
+                </div>
+                <div class="tela-card" data-tela="lana">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=2070&auto=format&fit=crop" alt="Lana merino">
+                    <p>Lana merino</p>
+                </div>
+                <div class="tela-card" data-tela="cuero">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2070&auto=format&fit=crop" alt="Cuero vegano">
+                    <p>Cuero vegano</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer igual que página principal -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>ROC NOIR</h4>
+                    <ul>
+                        <li><a href="index.html">Sobre nosotros</a></li>
+                        <li><a href="diseno-ia.html">Atelier IA</a></li>
+                        <li><a href="#">Sostenibilidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Redes</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                        <li><a href="https://mx.pinterest.com">Pinterest</a></li>
+                        <li><a href="https://x.com/?lang=es">X (Twitter)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 ROC NOIR Atelier Digital. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Datos simulados de imágenes para cada combinación (solo visual)
+        const imagenes = {
+            vestido: {
+                seda: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1887&auto=format&fit=crop',
+                algodon: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1887&auto=format&fit=crop',
+                lana: 'https://images.unsplash.com/photo-1612336307429-8e4b79e6c263?q=80&w=1887&auto=format&fit=crop',
+                cuero: 'https://images.unsplash.com/photo-1562155955-1cb2d73488d7?q=80&w=1887&auto=format&fit=crop'
+            },
+            chaqueta: {
+                seda: 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=1887&auto=format&fit=crop',
+                algodon: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1887&auto=format&fit=crop',
+                lana: 'https://images.unsplash.com/photo-1591369828696-4ddb50e1ea9a?q=80&w=1887&auto=format&fit=crop',
+                cuero: 'https://images.unsplash.com/photo-1521223895411-f9c54cafcef5?q=80&w=1887&auto=format&fit=crop'
+            },
+            pantalon: {
+                seda: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1887&auto=format&fit=crop',
+                algodon: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1887&auto=format&fit=crop',
+                lana: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1887&auto=format&fit=crop',
+                cuero: 'https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=1887&auto=format&fit=crop'
+            },
+            camisa: {
+                seda: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1887&auto=format&fit=crop',
+                algodon: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1770&auto=format&fit=crop',
+                lana: 'https://images.unsplash.com/photo-1603251579431-8041402bdeda?q=80&w=1887&auto=format&fit=crop',
+                cuero: 'https://images.unsplash.com/photo-1564257631407-4deb1f99d992?q=80&w=1887&auto=format&fit=crop'
+            }
+        };
+
+        // Descripciones dinámicas según opciones
+        function generarDescripcion(tipo, tela, color, estilo) {
+            return `Tu prenda personalizada: un(a) ${tipo} en ${tela} de lujo, color ${color} con acabado ${estilo}. La IA ha combinado tendencias de alta costura para un look exclusivo.`;
+        }
+
+        // Mapear nombres amigables
+        function nombreTipo(valor) {
+            const tipos = {
+                vestido: 'vestido de noche',
+                chaqueta: 'chaqueta estructurada',
+                pantalon: 'pantalón sastre',
+                camisa: 'camisa de seda'
+            };
+            return tipos[valor] || valor;
+        }
+
+        function nombreTela(valor) {
+            const telas = {
+                seda: 'seda natural',
+                algodon: 'algodón egipcio',
+                lana: 'lana merino',
+                cuero: 'cuero vegano'
+            };
+            return telas[valor] || valor;
+        }
+
+        function nombreEstilo(valor) {
+            const estilos = {
+                minimalista: 'minimalista',
+                vanguardista: 'vanguardista',
+                clasico: 'clásico atemporal',
+                aventurero: 'aventurero'
+            };
+            return estilos[valor] || valor;
+        }
+
+        // Actualizar imagen y descripción
+        function actualizarDiseno() {
+            const tipo = document.getElementById('tipoPrenda').value;
+            const tela = document.getElementById('tela').value;
+            const color = document.getElementById('color').value || 'Negro';
+            const estilo = document.getElementById('estilo').value;
+
+            // Obtener imagen según tipo y tela, si no existe usar una por defecto
+            let imagenUrl = imagenes[tipo]?.[tela];
+            if (!imagenUrl) {
+                imagenUrl = 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1887&auto=format&fit=crop';
+            }
+
+            document.getElementById('imagenIA').src = imagenUrl;
+            const descripcion = generarDescripcion(
+                nombreTipo(tipo),
+                nombreTela(tela),
+                color,
+                nombreEstilo(estilo)
+            );
+            document.getElementById('descripcionIA').innerHTML = descripcion;
+        }
+
+        // Evento clic botón
+        document.getElementById('generarBtn').addEventListener('click', actualizarDiseno);
+
+        // Opcional: al hacer clic en una tela sugerida, actualizar el select de tela
+        const telaCards = document.querySelectorAll('.tela-card');
+        telaCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const telaVal = card.getAttribute('data-tela');
+                if (telaVal) {
+                    document.getElementById('tela').value = telaVal;
+                    actualizarDiseno(); // opcional, generar automáticamente
+                }
+            });
+        });
+
+        // Cargar una primera imagen al iniciar
+        actualizarDiseno();
+    </script>
+</body>
+</html>
